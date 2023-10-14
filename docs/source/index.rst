@@ -1,22 +1,24 @@
-Welcome to Lumache's documentation!
+Mota_cpp
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Mota_cpp** 是一个基于C++语言和SFML图形库的魔塔雷游戏模板。
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+主要特点
+--------
+**画面**
+支持640×480的窗口和至多其长宽**2倍**大小的分辨率
 
-.. note::
+**音乐**
+使用的是SFML的Audio库，目前支持的音乐播放类型为wav, ogg/vorbis和flac。
 
-   This project is under active development.
+**编程语言**
+基于C++语言和SFML图形库，当前采用的是包含C++20在内的特性，您可以通过IDE调整至最新标准。
 
-Contents
+目录
 --------
 
 .. toctree::
 
-   usage
-   api
+   系统需求
+   前置介绍
+   
