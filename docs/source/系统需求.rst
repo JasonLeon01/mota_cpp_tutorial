@@ -1,34 +1,20 @@
 系统需求
 =====
 
-.. _installation:
-
-Installation
+推荐系统配置
 ------------
 
-To use Lumache, first install it using pip:
+系统：Windows 10及以上
+CPU：Intel i5-10400F及以上
+内存：8G以上
+硬盘：可用空间400MB以上
 
-.. code-block:: console
-
-   (.venv) $ pip install lumache
-
-Creating recipes
+IDE
 ----------------
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+建议为JetBrains CLion，当然，您也可以使用Microsoft Visual Studio等，不过需要一些变更，保证头文件、源文件、lib、dll以及各种数据文件都在即可。
+在CLion中，务必记住编码为UTF-8。
 
-.. autofunction:: lumache.get_random_ingredients
-
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
-
-.. autoexception:: lumache.InvalidKindError
-
-For example:
-
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
-
+系统设置
+----------------
+SFML需要使用与之相匹配的MinGW，在https://www.sfml-dev.org/download.php中下载最新的SFML的MinGW，并解压在本地，然后打开电脑属性-高级系统设置-高级-环境变量-系统变量-Path，选择编辑，并添加刚才下载的MinGW到里面，然后打开CLion读取工程时选择本地的MinGW即可。
