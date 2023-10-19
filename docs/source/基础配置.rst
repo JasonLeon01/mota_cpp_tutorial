@@ -6,12 +6,22 @@ config.ini和MotaConfig.exe
 
 这里是游戏窗口的基础配置，可以调节窗口分辨率、刷新频率、游戏音量。
 
+.. image:: sample_1.png
+   :align: center
+   :alt: MotaConfig画面
+
 具体的工程参考https://github.com/JasonLeon01/MotaConfig/ ，您可以修改并让MotaConfig.exe可以修改更多的配置。
 
 main.ini
 ----------------
 
-这里是游戏部分配置的存储，您可以直接使用文本编辑器打开，从上到下分别是：
+这里是游戏部分配置的存储，您可以直接使用文本编辑器打开。
+
+.. image:: sample_2.png
+   :align: center
+   :alt: main.ini内容
+
+从上到下分别是：
 
 windowskinName：窗口素材文件名，存储于graphics\system\
 
