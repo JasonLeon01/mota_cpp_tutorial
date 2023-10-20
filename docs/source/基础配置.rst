@@ -10,7 +10,7 @@ config.ini和MotaConfig.exe
    :align: center
    :alt: MotaConfig画面
 
-具体的工程参考https://github.com/JasonLeon01/MotaConfig/ ，您可以修改并让MotaConfig.exe可以修改更多的配置。
+具体的工程参考 https://github.com/JasonLeon01/MotaConfig/ ，您可以修改并让MotaConfig.exe可以修改更多的配置。
 
 main.ini
 ----------------
@@ -23,11 +23,11 @@ main.ini
 
 从上到下分别是：
 
-windowskinName：窗口素材文件名，存储于graphics\system\
+windowskinName：窗口素材文件名，存储于 ``graphics\system\``
 
-titleName：标题背景文件名，存储于graphics\system\
+titleName：标题背景文件名，存储于 ``graphics\system\``
 
-fontName：字体文件名，存储于font\
+fontName：字体文件名，存储于 ``font\``
 
 titleBGM为标题bgm
 
@@ -50,5 +50,7 @@ gateSE为开门SE
 stairSE为上下楼SE
 
 getSE为获取物品SE
+
+上述音效均存储于 ``sound\``
 
 windowOpacity为窗口不透明度，从0~255
