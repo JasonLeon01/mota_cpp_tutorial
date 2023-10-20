@@ -17,7 +17,7 @@ IDE
 
 系统设置
 ----------------
-SFML需要使用与之相匹配的MinGW，在 `https://www.sfml-dev.org/download.php/` 中下载最新的SFML的MinGW，并解压在本地，然后打开电脑属性-高级系统设置-高级-环境变量-系统变量-Path，选择编辑，并添加刚才下载的MinGW到里面，然后打开CLion读取工程时选择本地的MinGW即可。
+SFML需要使用与之相匹配的MinGW，在 https://www.sfml-dev.org/download.php/ 中下载最新的SFML的MinGW，并解压在本地，然后打开电脑属性-高级系统设置-高级-环境变量-系统变量-Path，选择编辑，并添加刚才下载的MinGW到里面，然后打开CLion读取工程时选择本地的MinGW即可。
 
 在使用本模板之前，您需要了解什么？
 ----------------
