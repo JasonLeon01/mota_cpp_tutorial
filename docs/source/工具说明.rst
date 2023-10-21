@@ -69,14 +69,31 @@
 ^^^^^^
 这个非常简单，就是对应 ``up`` 和 ``down`` ，其中是含有上下楼动画的，这些您可以自行调整或者取消，上下楼动画为 ``graphics\system\mting.png`` 文件。
 
+传送
+^^^^
+命名方式为 ``move/m/x/y`` ，其中 ``m`` 为传送去的地图编号， ``x,y`` 为传送到的x,y坐标。
+
 NPC
 ^^^^
 NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成对话，这一部分的编辑在 **对话编辑器** 里面可以了解。
 
+行走图
+-------
+
+.. image:: sample_5.png
+   :align: center
+   :alt: 行走图
+
+这里决定了事件的行走图以及在行走图上对应的位置，行走图素材严格按照128*128的标准，在区域内按下鼠标右键可以选择图片，按下鼠标左键可以选择位置。
+
+.. image:: sample_6.png
+   :align: center
+   :alt: 选择图片
+
 出现触发判定
 -----------
 
-.. image:: sample_5.png
+.. image:: sample_7.png
    :align: center
    :alt: 出现触发判定
 
@@ -102,7 +119,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 地图名
 ^^^^^^
 
-.. image:: sample_6.png
+.. image:: sample_8.png
    :align: center
    :alt: 地图名
 
@@ -113,7 +130,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 地图BGM
 ^^^^^^^
 
-.. image:: sample_7.png
+.. image:: sample_9.png
    :align: center
    :alt: 地图BGM
 
@@ -122,7 +139,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 动效
 ^^^^^^^^
 
-.. image:: sample_8.gif
+.. image:: sample_10.gif
    :align: center
    :alt: 动效
 
@@ -131,7 +148,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 穿透
 ^^^^
 
-.. image:: sample_9.png
+.. image:: sample_11.png
    :align: center
    :alt: 穿透
 
@@ -140,7 +157,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 隐藏信息
 ^^^^^^^^
 
-.. image:: sample_10.gif
+.. image:: sample_12.gif
    :align: center
    :alt: 隐藏信息
 
