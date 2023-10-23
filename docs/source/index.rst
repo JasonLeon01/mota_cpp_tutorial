@@ -18,6 +18,7 @@ Mota_cpp
 --------
 
 .. toctree::
+   :maxdepth: 2
 
    前置介绍
    基础配置
