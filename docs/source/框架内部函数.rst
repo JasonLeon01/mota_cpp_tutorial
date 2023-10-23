@@ -126,7 +126,7 @@
 
 此重载的 ``file`` , ``x`` , ``y`` , ``opacity`` 和上面一致。
 
-.. image:: sample_22.png
+.. image:: sample_23.png
    :align: center
    :alt: 矩形演示
 
