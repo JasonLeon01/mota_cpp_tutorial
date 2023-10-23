@@ -13,7 +13,7 @@
 具体的工程参考 https://github.com/JasonLeon01/MotaConfig/ ，您可以修改并让Config.exe可以修改更多的配置。
 
 2. main.ini
-----------------
+~~~~~~~~~~~~
 
 这里是游戏部分配置的存储，您可以直接使用文本编辑器打开。
 
