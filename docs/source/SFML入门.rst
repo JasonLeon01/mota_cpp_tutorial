@@ -1,5 +1,5 @@
 SFML入门
-=======
+=========
 
 本节只进行简单的介绍，更多内容请移步 https://www.sfml-dev.org/tutorials/2.6/ 和 https://www.sfml-dev.org/documentation/2.6.0/ 进行了解。
 
