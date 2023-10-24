@@ -1,5 +1,7 @@
-框架内部类
-=========
+内部类
+=======
+
+这一部分可以参考 ``include\Game\GameSystem.h`` 和 ``GameSystem.cpp`` 文件内容。
 
 1. SceneBase
 ~~~~~~~~~~~~~
