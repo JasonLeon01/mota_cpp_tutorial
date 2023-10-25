@@ -32,17 +32,23 @@
 
 判断字符串中是否含有某个子串，并返回结果。
 
-7. existFile(filepath)
+7. replaceAll(source, target, replacement)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+将字符串 ``source`` 中所有的 ``target`` 都替换为 ``replacement`` 。
+
+
+8. existFile(filepath)
 ~~~~~~~~~~~~~~~~~~~~~~
 
 判断是否存在某个文件。
 
-8. split(s, seperator)
+9. split(s, seperator)
 ~~~~~~~~~~~~~~~~~~~~~~
 
 将一个字符串根据分割符分割成若干个子串，返回的是一个 ``vector<string>`` 类型的值。
 
-9. readData(file, splt)
+10. readData(file, splt)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 根据本框架数据存储格式来读取数据信息，第二个参数默认为 ``":""`` ，也是一个分割符，用来分割数据名称和数据值。 假设一个数据文件的存储格式如下：
@@ -69,17 +75,17 @@
 
 可以看出，冒号换成了等于号，所以在读取ini文件时，第二个参数设置成 ``"="`` 即可。
 
-10. playSE(file)
+11. playSE(file)
 ~~~~~~~~~~~~~~~~~~
 
 用来播放SE的函数。 ``file`` 部分直接写文件名即可，本函数会直接定向到 ``sound\`` 文件夹。
 
-11. drawText
+12. drawText
 ~~~~~~~~~~~~
 
 用于在屏幕上显示文字的函数，本函数有两个重载：
 
-11.1. drawText(dx, dy, content, size, bond, Colour)
+12.1. drawText(dx, dy, content, size, bond, Colour)
 -------------------------------------------------------
 
 ``dx`` 和 ``dy`` 为xy坐标；
@@ -92,7 +98,7 @@
 
 ``colour`` 为文字颜色，缺省值白色。
 
-11.2. drawText(rect, content, pos, size, bond, colour)
+12.2. drawText(rect, content, pos, size, bond, colour)
 ------------------------------------------------------
 
 ``rect`` 为坐标限制矩形，文字会显示在矩形的垂直中心位置；
@@ -107,12 +113,12 @@
 
 ``colour`` 为文字颜色，缺省值白色。
 
-12. drawImage
+13. drawImage
 ~~~~~~~~~~~~~~
 
 用于在屏幕上临时绘图的函数，本函数也有两个重载：
 
-12.1. drawImage(file, x, y, opacity)
+13.1. drawImage(file, x, y, opacity)
 ------------------------------------
 
 ``file`` 为文件路径，需要注意，函数仅会定位至 ``graphics\`` 文件夹，后续文件夹需要标明。
@@ -123,7 +129,7 @@
 
 ``opacity`` 为显示的不透明度，缺省值255。
 
-12.2. drawImage(file, x, y, rect, opacity)
+13.2. drawImage(file, x, y, rect, opacity)
 -------------------------------------------
 
 此重载的 ``file`` , ``x`` , ``y`` , ``opacity`` 和上面一致。
