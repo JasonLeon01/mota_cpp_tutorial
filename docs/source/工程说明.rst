@@ -17,3 +17,8 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 您需要首先创建一个自己的 ``Icon.ico`` 文件，打开CLion的 ``Terminal`` ，输入 ``windres Icon.rc -o Icon.o`` 命令生成对应的 ``Icon.o`` 文件，然后 ``Reload Cmake Project`` 加载CMake，点击 ``Build`` 构建exe即可。
+
+4. ShortcutKey.txt是什么，有什么作用？
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+这是用来介绍快捷键的文本，您的工程以后需要用到的快捷键介绍可以写在这里，当状态栏检测到 ``ShortcutKey.txt`` 存在时，会在地图右下角显示一个 ``～Press L～`` ，提示玩家按L键获取快捷键信息。
