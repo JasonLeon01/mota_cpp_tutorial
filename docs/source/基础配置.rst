@@ -23,34 +23,22 @@
 
 从上到下分别是：
 
-windowskinName：窗口素材文件名，存储于 ``graphics\system\``
+.. csv-table:: 
+    :header: "参数", "含义", "备注"
+    :widths: 20, 50, 50
 
-titleName：标题背景文件名，存储于 ``graphics\system\``
-
-fontName：字体文件名，存储于 ``font\``
-
-titleBGM为标题bgm
-
-cursorSE为选择SE
-
-decisionSE为确认SE
-
-cancelSE为取消SE
-
-buzzerSE为警告SE
-
-shopSE为商店SE
-
-saveSE为存档SE
-
-loadSE为读档SE
-
-gateSE为开门SE
-
-stairSE为上下楼SE
-
-getSE为获取物品SE
-
-上述音效均存储于 ``sound\``
-
-windowOpacity为窗口不透明度，从0~255
+    "windowskinName", "窗口素材文件名", "存储于graphics\system\"
+    "titleName", "标题背景文件名", "存储于graphics\system\"
+    "fontName", "字体文件名", "存储于font\"
+    "titleBGM", "标题bgm", ""
+    "cursorSE", "选择SE", ""
+    "decisionSE", "确认SE", ""
+    "cancelSE", "取消SE", ""
+    "buzzerSE", "警告SE", ""
+    "shopSE", "商店SE", ""
+    "saveSE", "存档SE", ""
+    "loadSE", "读档SE", ""
+    "gateSE", "开门SE", ""
+    "stairSE", "上下楼SE", ""
+    "getSE", "获取物品SE", ""
+    "windowOpacity", "窗口不透明度", "从0~255"

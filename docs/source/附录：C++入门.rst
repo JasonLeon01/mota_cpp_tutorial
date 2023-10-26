@@ -43,15 +43,14 @@ C++中数字常用变量类型分为 ``short`` , ``int`` , ``long`` , ``long lon
 
 类似的函数还有如下几种：
 
-``stoi`` ：将字符串转换为 ``int`` 类型。
+.. csv-table:: 
+    :widths: 50, 100
 
-``stol`` ：将字符串转换为 ``long`` 类型。
-
-``stoll`` ：将字符串转换为 ``long long`` 类型。
-
-``stoui`` ：将字符串转换为 ``unsigned int`` 类型。
-
-``stoull`` ：将字符串转换为 ``unsigned long long`` 类型。
+    "stoi", "将字符串转换为int类型"
+    "stol", "将字符串转换为long类型"
+    "stoll", "将字符串转换为long long类型"
+    "stoui", "将字符串转换为unsigned int类型"
+    "stoull", "将字符串转换为unsigned long long类型"
 
 3.4 std::format(fmt, ...args)
 ------------------------------
@@ -68,7 +67,7 @@ C++中数字常用变量类型分为 ``short`` , ``int`` , ``long`` , ``long lon
 
 可以注意到， ``format`` 和 ``printf``有部分相似之处，即格式化输出，不过在 ``printf`` 中的例如 ``%d`` 等内容，都被换成了 ``{}`` ，然后在后面逐个表示变量即可，一般数字和字符串不需要再进行调整。
 
-4. 条件分歧
+1. 条件分歧
 ~~~~~~~~~~~
 
 4.1. 真伪值

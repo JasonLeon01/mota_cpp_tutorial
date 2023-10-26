@@ -18,56 +18,23 @@ Image类型，可以类比为RMXP里的 ``Sprite`` 类（虽然这个就是SFML�
 2.1. 成员
 ----------
 
-2.1.1. x, y, z
-^^^^^^^^^^^^^^
+.. csv-table:: 
+    :widths: 30, 100
 
-``x`` 和 ``y`` 就是Image的xy坐标， ``z`` 是优先级， ``z`` 越高在屏幕上的优先级越大，显示的就越靠前。
-
-2.1.2. origin_x, origin_y
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-设置图像的原点，默认都为0。
-
-2.1.3. scale_x, scale_y
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-设置图像在横纵方向上的放缩率，这里直接相对原图片尺寸放缩来填就可以，根据 ``config.ini`` 分辨率进行的放缩会在 ``show`` 函数中显示（ ``show`` 为私有成员，仅会在 ``motaGraphics.update`` 中使用）。
-
-2.1.4. width, height, sx, sy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-用于切割图像的参数，默认都为0， ``width`` 和 ``height`` 为0时不进行切割。
-
-2.1.5. opacity
-^^^^^^^^^^^^^^^
-
-为图像的不透明度。
-
-2.1.6. angle
-^^^^^^^^^^^^
-
-为图像的旋转角度。
-
-2.1.7. visible
-^^^^^^^^^^^^^^
-
-决定一个图像是否可见，不可见时设置为 ``false`` 。
+    "x, y, z", "Image的xy坐标，z是优先级，z越高在屏幕上的优先级越大，显示的就越靠前"
+    "origin_x, origin_y", "设置图像的原点，默认都为0"
+    "scale_x, scale_y", "设置图像在横纵方向上的放缩率"
+    "width, height, sx, sy", "用于切割图像的参数，默认都为0，width和height为0时不进行切割"
+    "opacity", "图像的不透明度"
+    "angle", "图像的旋转角度"
+    "visible", "决定一个图像是否可见"
 
 2.2. 函数
 ---------
 
 2.2.1. 构造函数
 ^^^^^^^^^^^^^^^
-
-2.2.1.1. GameImage()
-""""""""""""""""""""
-
-默认的构造函数，会将所有参数设置为默认值。
-
-2.2.1.2. GameImage(file, ix, iy, iwidth, iheight, isx, isy)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-重载的构造函数，对相应的成员进行初始化。
+GameImage(file, ix, iy, iwidth, iheight, isx, isy)，对相应的成员进行初始化。
 
 除了 ``file`` 以外，其余参数缺省值为0。
 
@@ -81,7 +48,7 @@ Image类型，可以类比为RMXP里的 ``Sprite`` 类（虽然这个就是SFML�
 
 将该对象从 ``motaGraphics`` 的队列中删除，更新画面时将不再显示。
 
-3. System -> motaSystem
+1. System -> motaSystem
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 本框架的系统类，用于储存各种和系统相关的数据，对应跨文件全局变量为 ``motaSystem`` 。
@@ -89,42 +56,20 @@ Image类型，可以类比为RMXP里的 ``Sprite`` 类（虽然这个就是SFML�
 3.1. 成员
 ---------
 
-3.1.1. window, font, bgm, scene
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. csv-table:: 
+    :widths: 50, 200
 
-``window`` 为这个游戏的窗口，一切和窗口相关的都在这里调整；
-
-``font`` 为游戏字体，字体的设置在这里调整；
-
-``bgm`` 为游戏BGM， ``Music`` 类型变量；
-
-``scene`` 为设置场景的变量， ``motaSystem.scene`` 可以类比为RMXP里的 ``$scene`` 。
-
-3.1.2. gameTime, frameRate, windowOpacity, resolutionRatio
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-``gameTime`` 用以计算游戏时间，每刷新一次将会+1，一般是用来设置行走动画相关的内容；
-
-``frameRate`` 是刷新频率，每隔若干时间会刷新一次；
-
-``windowOpacity`` 是默认的窗口不透明度；
-
-``resolutionRatio`` 是当前的分辨率（放大率），最低是1（即默认的640x480），最大是2（变成1280x960）。
-
-3.1.3. BGMVolume, setVolume
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-为BGM和SE的音量。
-
-3.1.4. xxSE
-^^^^^^^^^^^^
-
-为各种SE的文件名，具体参考 ``main.ini`` 。
-
-3.1.5. textureCache
-^^^^^^^^^^^^^^^^^^^^
-
-为纹理的缓存，这些都会在开始游戏时缓存完成。
+    "window", "为这个游戏的窗口，一切和窗口相关的都在这里调整"
+    "font", "为游戏字体，字体的设置在这里调整"
+    "bgm", "为游戏BGM，Music类型变量"
+    "scene", "为设置场景的变量，motaSystem.scene可以类比为RMXP里的$scene"
+    "gameTime", "用以计算游戏时间，每刷新一次将会+1，一般是用来设置行走动画相关的内容"
+    "frameRate", "是刷新频率，每隔若干时间会刷新一次"
+    "windowOpacity", "是默认的窗口不透明度"
+    "resolutionRatio", "是当前的分辨率（放大率），最低是1（即默认的640x480），最大是2（变成1280x960）"
+    "BGMVolume, SEVolume", 为BGM和SE的音量。
+    "xxSE", "为各种SE的文件名，具体参考main.ini"
+    "textureCache", "为纹理的缓存，这些都会在开始游戏时缓存完成。"
 
 3.2. 函数
 ----------
@@ -139,7 +84,7 @@ Image类型，可以类比为RMXP里的 ``Sprite`` 类（虽然这个就是SFML�
 
 切换BGM使用的函数。
 
-4. GameKeyBoard -> motaKeyBoard
+1. GameKeyBoard -> motaKeyBoard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 关于全键盘的类，和魔塔样板的全键盘脚本相似，对应跨文件全局变量为 ``motaKeyBoard`` 。
@@ -188,15 +133,7 @@ Image类型，可以类比为RMXP里的 ``Sprite`` 类（虽然这个就是SFML�
 5.2.1. 构造函数
 ^^^^^^^^^^^^^^^
 
-5.2.1.1. GameWindow()
-""""""""""""""""""""""
-
-为默认构造函数，初始化上述成员， ``hasFunction`` 默认为 ``false`` 。
-
-5.2.1.2. GameWindow(rect, wopacity)
-""""""""""""""""""""""""""""""""""""
-
-重载的构造函数， ``rect`` 为信息矩形，分别为xy坐标和宽高， ``opacity`` 为不透明度，缺省值窗口默认不透明度。
+GameWindow(rect, wopacity)， ``rect`` 为信息矩形，分别为xy坐标和宽高， ``opacity`` 为不透明度，缺省值窗口默认不透明度。
 
 5.2.2. drawRect(rect)
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -218,7 +155,7 @@ Image类型，可以类比为RMXP里的 ``Sprite`` 类（虽然这个就是SFML�
 
 释放窗口的函数，将会把 ``this`` 从 ``motaGraphics`` 的队列中删除。
 
-6. GameSelectWindow
+1. GameSelectWindow
 ~~~~~~~~~~~~~~~~~~~
 
 处理待遇选择项窗口的类，继承自 ``GameWindow`` 。
@@ -226,14 +163,13 @@ Image类型，可以类比为RMXP里的 ``Sprite`` 类（虽然这个就是SFML�
 6.1. 新增成员
 -------------
 
-``index`` ：当前的选项号，从0开始；
+.. csv-table:: 
+    :widths: 50, 100
 
-``rectHeight`` ：选择矩形的高度；
-
-``active``：是否活跃的标志，为 ``false`` 时将不能通过按键调整选项；
-
-``items`` ：选项的集合，为 ``vector<string>`` 类型。
-
+    "index", "当前的选项号，从0开始"
+    "rectHeight", "选择矩形的高度"
+    "active", "否活跃的标志，为false时将不能通过按键调整选项"
+    "items", "选项的集合，为vector<string>类型"
 6.2. 函数
 ----------
 
@@ -252,7 +188,7 @@ Image类型，可以类比为RMXP里的 ``Sprite`` 类（虽然这个就是SFML�
 
 绘制选项内容的函数。
 
-7. GameGraphics -> motaGraphics
+1. GameGraphics -> motaGraphics
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 用于承载和刷新游戏画面的类，对应跨文件全局变量为 ``motaGraphics`` 。
