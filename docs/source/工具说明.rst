@@ -1,7 +1,17 @@
 工具说明
 =======
 
-本节下的所有内容均存于 ``tools\`` 文件夹下，本文件夹可改名，但是一定要保证下列工具在 ``data\`` 和 ``graphics\`` 所在路径的再往下一层。
+.. role:: highlight
+   :class: highlight
+```
+.highlight {
+    background-color: gray;
+    color: black;
+}
+```
+
+本节下的所有内容均存于 `tools\` 文件夹下，本文件夹可改名，但是一定要保证下列工具在 `data\` 和 `graphics\` 所在路径的再往下一层。
+```
 
 1. 可视化地图编辑器MapDesigner.exe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
