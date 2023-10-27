@@ -12,10 +12,19 @@
 在 ``data\actor\`` 处修改，角色数据文件名遵循 ``actor_x.dat`` 的格式。
 
 .. csv-table:: 
-    :header: "参数", "name", "file", "level", "hp", "atk", "def", "mdef", "mapID", "x", "y", "animation_id"
-    :widths: 20, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30
+    :widths: 20, 30
 
-    "代表", "角色名", "行走图文件名", "初始等级", "初始生命", "初始攻击", "初始防御", "初始魔防", "初始地图编号", "初始x坐标", "初始y坐标", "初始动画编号"
+    "name", "角色名"
+    "file", "行走图文件名"
+    "level", "初始等级"
+    "hp", "初始生命"
+    "atk", "初始攻击"
+    "def", "初始防御"
+    "mdef", "初始魔防"
+    "mapID", "初始地图编号"
+    "x", "初始x坐标"
+    "y", "初始y坐标"
+    "animation_id", "初始动画编号"
 
 敌人数据
 --------
@@ -23,10 +32,19 @@
 在 ``data\enemy\`` 处修改，敌人数据文件名遵循 ``enemy_x.dat`` 的格式。
 
 .. csv-table:: 
-    :header: "参数", "name", "file", "element", "pos", "hp", "atk", "def", "conatk", "exp", "gold", "animation_id"
-    :widths: 20, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30
+    :widths: 20, 30
 
-    "代表", "敌人名", "行走图文件名", "属性", "所在行走图行数", "生命", "攻击", "防御", "连击", "经验", "金币", "动画编号"
+    "name", "敌人名"
+    "file", "行走图文件名"
+    "element", "属性"
+    "pos", "所在行走图行数"
+    "hp", "生命"
+    "atk", "攻击"
+    "def", "防御"
+    "conatk", "连击"
+    "exp", "经验"
+    "gold", "金币"
+    "animation_id", "动画编号"
 
 其中，属性数据由 ``,`` 分隔，注意，是半角英文逗号。
 
@@ -36,10 +54,10 @@
 在 ``data\element\`` 处修改，属性数据文件名遵循 ``element_x.dat`` 的格式。
 
 .. csv-table::
-    :header: "参数", "name", "description"
-    :widths: 20, 50, 50
+    :widths: 20, 30
 
-    "代表", "属性名", "属性描述"
+    "name", "属性名"
+    "description", "属性描述"
 
 物品数据
 --------
@@ -47,10 +65,15 @@
 在 ``data\item\`` 处修改，物品数据文件名遵循 ``item_x.dat`` 的格式。
 
 .. csv-table::
-    :header: "参数", "name", "description", "file", "pos", "price", "usable", "cost"
-    :widths: 20, 30, 30, 30, 30, 30, 30, 30
+    :widths: 20, 30
 
-    "代表", "物品名称", "物品描述", "文件名", "所在位置", "价格", "可否使用", "可否消耗"
+    "name", "物品名称"
+    "description", "物品描述"
+    "file", "文件名"
+    "pos", "所在位置"
+    "price", "价格"
+    "usable", "可否使用"
+    "cost", "可否消耗"
 
 其中， ``文件名`` 指的是物品在 ``graphics\character\`` 处对应的行走图文件名。
 
