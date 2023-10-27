@@ -4,7 +4,7 @@
 怎样编译工程
 ~~~~~~~~~~~~~~
 
-如果您使用的是JetBrains CLion，您可以打开软件并定位至目标项目，找到 ``include\Game\`` 下的所有文件并双击加入顶部栏中，然后将原目录下的所有 ``.cpp`` 文件和 ``CMakeLists.txt`` 文件加入顶部栏。
+如果您使用的是JetBrains CLion，您可以打开软件并定位至目标项目，找到 ``include\Game\`` 下的所有文件并双击加入顶部栏中，然后将  ``src\`` 下的所有 ``.cpp`` 文件和 ``CMakeLists.txt`` 文件加入顶部栏。
 
 在左侧栏右键点击 ``CmakeLists.txt`` ，选择 ``Reload Cmake Project`` ，即可加载CMake，右上角点击锤子样式的 ``Build`` 图标即可。点击绿色右箭头样式的 ``Run`` 图标可以运行，点击虫子样式的 ``Debug`` 图标可以调试断点等。
 
