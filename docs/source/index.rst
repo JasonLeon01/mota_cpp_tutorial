@@ -19,7 +19,6 @@ Mota_cpp
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: 🚀 写在最前
 
    /写在最前/前置介绍
@@ -27,7 +26,6 @@ Mota_cpp
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: 💡 外部介绍
 
    /外部介绍/工具说明
@@ -36,7 +34,6 @@ Mota_cpp
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: 🪄 内部介绍
 
    /内部介绍/内部函数
@@ -45,7 +42,6 @@ Mota_cpp
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: 📚 附录
 
    /附录/C++入门
