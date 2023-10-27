@@ -16,7 +16,7 @@
 3. 怎样修改生成exe的图标
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-您需要首先创建一个自己的 ``Icon.ico`` 文件，打开CLion的 ``Terminal`` ，输入 ``windres Icon.rc -o Icon.o`` 命令生成对应的 ``Icon.o`` 文件，然后 ``Reload Cmake Project`` 加载CMake，点击 ``Build`` 构建exe即可。
+您需要首先创建一个自己的 ``Icon.ico`` 文件，放入 ``ico\`` 路径下，在该文件夹下点击鼠标右键，选择 **在终端中打开** ，输入 ``windres Icon.rc -o Icon.o`` 命令生成对应的 ``Icon.o`` 文件，然后在Clion中 ``Reload Cmake Project`` 加载CMake，点击 ``Build`` 构建exe即可。
 
 4. ShortcutKey.txt是什么，有什么作用？
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

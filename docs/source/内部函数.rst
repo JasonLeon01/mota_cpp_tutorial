@@ -1,7 +1,7 @@
 内部函数
 ========
 
-这一部分可以参考 ``include\Game\stdafx.h`` 和 ``stdafx.cpp`` 文件内容。
+这一部分可以参考 ``include\Game\stdafx.h`` 和 ``src\stdafx.cpp`` 文件内容。
 
 1. quickPow(num, n)
 ~~~~~~~~~~~~~~~~~~~

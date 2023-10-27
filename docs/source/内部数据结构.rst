@@ -1,7 +1,7 @@
 内部数据结构
 ===========
 
-这一部分可以参考 ``include\Game\GameData.h`` 和 ``GameData.cpp`` 文件内容。
+这一部分可以参考 ``include\Game\GameData.h`` 和 ``src\GameData.cpp`` 文件内容。
 
 所有数据的存储是在 :ref:`label_gamedata` 处，可以直接点击跳转。
 
