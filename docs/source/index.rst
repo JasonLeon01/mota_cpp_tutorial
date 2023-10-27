@@ -26,32 +26,32 @@ Mota_cpp
    :numbered:
    :caption: 🚀 写在最前
 
-   /写在最前/前置介绍
-   /写在最前/基础配置
+   /front/intro
+   /front/config
 
 .. toctree::
    :maxdepth: 2
    :numbered:
    :caption: 💡 外部介绍
 
-   /外部介绍/工具说明
-   /外部介绍/数据文件说明
-   /外部介绍/工程说明
+   /tool&data/tools
+   /tool&data/datas
+   /tool&data/projects
 
 .. toctree::
    :maxdepth: 2
    :numbered:
    :caption: 🪄 内部介绍
 
-   /内部介绍/内部函数
-   /内部介绍/内部类
-   /内部介绍/内部数据结构
+   /inner/functions
+   /inner/classes
+   /inner/data_structures
 
 .. toctree::
    :maxdepth: 2
    :numbered:
    :caption: 📚 附录
 
-   /附录/C++入门
-   /附录/SFML入门
+   /appendix/C++
+   /appendix/SFML
 

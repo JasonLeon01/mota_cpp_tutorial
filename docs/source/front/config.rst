@@ -1,7 +1,7 @@
 基础配置
 =======
 
-1. config.ini和Config.exe
+config.ini和Config.exe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 这里是游戏窗口的基础配置，可以调节窗口分辨率、刷新频率、游戏音量。
@@ -12,7 +12,7 @@
 
 具体的工程参考 https://github.com/JasonLeon01/MotaConfig/ ，您可以修改并让Config.exe可以修改更多的配置。
 
-2. main.ini
+main.ini
 ~~~~~~~~~~~~
 
 这里是游戏部分配置的存储，您可以直接使用文本编辑器打开。

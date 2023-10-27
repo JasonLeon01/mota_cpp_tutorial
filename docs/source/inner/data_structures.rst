@@ -5,7 +5,7 @@
 
 所有数据的存储是在 :ref:`label_gamedata` 处，可以直接点击跳转。
 
-1. GameTemp -> motaTemp
+GameTemp -> motaTemp
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 用来存储临时变量的类，后续自行DIY也可以在此处修改，当前已有的临时变量会在 ``order`` 函数处对其赋值。
@@ -25,7 +25,7 @@
     "messageInfo", "对话信息"
     "floorEnemies", "记录当前楼层怪物信息"
 
-2. GameVariables -> motaVariables
+GameVariables -> motaVariables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 游戏变量相关的集合。
@@ -39,12 +39,12 @@
     "eventRecord", "记录消失过的事件"
     "transRecord", "记录变更过名字的事件"
 
-3. GameEvent
+GameEvent
 ~~~~~~~~~~~~~
 
 用来描述游戏事件的类。
 
-3.1. 成员
+成员
 ---------
 
 .. csv-table::
@@ -60,25 +60,25 @@
     "through", "是否可穿透"
     "exist", "事件还存在的标志"
 
-3.2. 函数
+函数
 ----------
 
-3.2.1. 构造函数
+构造函数
 ^^^^^^^^^^^^^^^
 
 GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
 
-3.2.2. order()
+order()
 ^^^^^^^^^^^^^
 
 一切事件指令的存储。
 
-4. GameMap
+GameMap
 ~~~~~~~~~~~
 
 用来描述游戏地图数据的类。
 
-4.1. 成员
+成员
 ----------
 
 .. csv-table::
@@ -89,35 +89,35 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
     "bgmFile", "地图BGM的文件名"
     "mapEvents", "地图上事件的集合"
 
-4.2. 函数
+函数
 ---------
 
-4.2.1. haveAnEvent(x, y)
+haveAnEvent(x, y)
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 判断地图上(x, y)处是否有事件。
 
-4.2.2. checkEvent(x, y)
+checkEvent(x, y)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 返回(x, y)处事件的ID。
 
-4.2.3. EcheckEvent(x, y)
+EcheckEvent(x, y)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 直接返回(x, y)处事件的对象。
 
-4.2.4. passible(x, y)
-^^^^^^^^^^^^^^^^^^^^^
+passible(x, y)
+^^^^^^^^^^^^^^
 
 判断(x, y)处是否可通行，判断标准是此处是否有事件，有的话是否可穿透。
 
-5. GameActors
+GameActors
 ~~~~~~~~~~~~~
 
 描述游戏角色数据的类。
 
-5.1. 成员
+成员
 ----------
 
 .. csv-table::
@@ -139,25 +139,25 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
     "item", "角色所持有物品数量"
 
 
-5.2. 函数
+函数
 ----------
 
-5.2.1. getAtk()
+getAtk()
 ^^^^^^^^^^^^^^
 
 获取角色攻击的实际值，会减去其衰弱效果值。
 
-5.2.1. getDef()
+getDef()
 ^^^^^^^^^^^^^^
 
 获取角色防御的实际值，会减去其衰弱效果值。
 
-6. GamePlayer
+GamePlayer
 ~~~~~~~~~~~~~~
 
 描述屏幕上玩家数据的类。
 
-6.1. 成员
+成员
 ----------
 
 .. csv-table::
@@ -167,25 +167,25 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
     "step", "角色步数"
     "visible", "是否可见"
 
-6.2. 函数
+函数
 ---------
 
-6.2.1. update()
+update()
 ^^^^^^^^^^^^^^
 
 玩家数据的更新，上下左右行走的判断就在于此。
 
-6.2.2. changeSteps()
+changeSteps()
 ^^^^^^^^^^^^^^^^^^
 
 步数改变时会发生的情况，一般用于阻击、激光、夹击、领域等情况。
 
-7. GameEnemy
+GameEnemy
 ~~~~~~~~~~~~~
 
 描述敌人数据的类。
 
-7.1. 成员
+成员
 ----------
 
 .. csv-table::
@@ -203,42 +203,42 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
     "gold", "敌人金币"
     "animationID", "敌人动画编号"
 
-7.2. 函数
+函数
 ----------
 
-7.2.1. getDamage()
+getDamage()
 ^^^^^^^^^^^^^^^^^
 
 根据当前角色能力数据，获取敌人对自己造成的伤害， ``-1`` 为不可战胜，也可以在参数里面按顺序输入拟定的角色攻击力、防御力和魔防来计算虚拟伤害。
 
-7.2.2. getDef()
+getDef()
 ^^^^^^^^^^^^^^
 
 获取怪物真实防御，一般用于坚固怪。
 
-7.2.3. getP(p)
+getP(p)
 ^^^^^^^^^^^^
 
 判断怪物是否拥有某属性。
 
-7.2.4. getCrisis()
+getCrisis()
 ^^^^^^^^^^^^^^^^^
 
 获取怪物临界。
 
-7.2.5. getElement(pid)
+getElement(pid)
 ^^^^^^^^^^^^^^^^^^
 
 获取怪物属性及其描述，如果是会变动的属性（如不同的衰弱效果），就将数值写入第二个参数。
 
-8. GameElement
+GameElement
 ~~~~~~~~~~~~~~~
 
 描述怪物属性数据的类。
 
 成员仅有 ``name`` 和 ``description`` ，描述属性名字和效果。
 
-9. GameItem
+GameItem
 ~~~~~~~~~~~~
 
 描述物品数据的类。
@@ -254,7 +254,7 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
     "usable", "是否可在物品栏使用"
     "cost", "是否可消耗"
 
-10. GameAnimation
+GameAnimation
 ~~~~~~~~~~~~~~~~~~
 
 描述动画数据的类。
@@ -266,7 +266,7 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
     "SEFile", "动画播放SE的文件名"
     "SETime", "播放SE所在的帧数"
 
-11. GameNPC
+GameNPC
 ~~~~~~~~~~~
 
 描述NPC数据的类。
@@ -280,12 +280,12 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
     "directlyFunction", "转换完成是否立刻执行"
 
 .. _label_gamedata:
-12.  GameData -> motaData ★★★
+GameData -> motaData ★★★
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 一切数据的存储器，所有的数据都存储在这里。
 
-12.1. 成员
+成员
 -----------
 
 .. csv-table::
@@ -301,25 +301,25 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
 
 .. hint:: 其中 ``actors`` 和 ``maps`` 仅仅存放初始数据， **请勿修改** ，关于游戏中相关的在后面。
 
-12.2. 函数
+函数
 -----------
 
-12.2.1. init()
+init()
 ^^^^^^^^^^^^^^^
 
 初始化函数，会读取数据库重置上述信息，仅在打开游戏时调用，请勿随意使用。
 
-12.2.2. searchMap(mapnane)
+searchMap(mapnane)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 按照地图名搜索地图的函数，返回相应地图编号，同名地图返回序号靠前的。
 
-13. ScreenData -> screenData ★★★★★
+ScreenData -> screenData ★★★★★
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 存储游戏屏幕上所显示数据的类。
 
-13.1. 成员
+成员
 ----------
 
 .. csv-table::
@@ -331,42 +331,42 @@ GameEvent(ex, ey)，可以初始化对象的初始xy坐标。
 
 其中， ``screenData.actors`` 和 ``screenData.visualMap`` 为本类核心。
 
-13.2. 函数
+函数
 -----------
 
-13.2.1. init()
+init()
 ^^^^^^^^^^^^^^^
 
 初始化函数，会将角色数据从 ``motaData.actors`` 中读取。
 
-13.2.2. loadMap(mapID)
+loadMap(mapID)
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 读取地图的函数，会从 ``motaData.maps`` 中读取地图文件数据并根据当前的 ``motaVariables`` 更改地图样式。
 
-13.2.3. mapStatus()
+mapStatus()
 ^^^^^^^^^^^^^^^^^^^^
 
 显示游戏状态栏的函数，状态栏的DIY在此处修改。
 
-13.2.4. showMap(gmap, x, y)
+showMap(gmap, x, y)
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 在画面的(x, y)处显示地图 ``gmap`` 的函数，作用和 ``motaGraphics.update()`` 相当，游戏中的动画也在此处显示，在遍历事件处有地图显示伤害的配置，可在此处自行修改。
 
 此外，还可以在最后插一个 ``float`` 类型的变量 ``rate`` ，代表地图的放缩率，缺省值为1。
 
-13.2.5. waitCount(times)
+waitCount(times)
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 等待的函数，等待的帧数期间不可操作。
 
-13.2.6. addAnimation(id, x, y) & addEVAnimation(id, x, y)
+addAnimation(id, x, y) & addEVAnimation(id, x, y)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 在地图上显示动画的函数，前者的xy为屏幕坐标，后者的xy为地图坐标（0~10）
 
-13.2.7. loadData & saveData
+loadData & saveData
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 顾名思义，读档和存档的函数，具体的DIY在此处修改，因为C++没有序列化数据的能力，所以大多都要拆散自行存储。

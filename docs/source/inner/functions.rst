@@ -3,66 +3,66 @@
 
 这一部分可以参考 ``include\Game\stdafx.h`` 和 ``src\stdafx.cpp`` 文件内容。
 
-1. quickPow(num, n)
+quickPow(num, n)
 ~~~~~~~~~~~~~~~~~~~
 
 快速幂计算，相比 ``<cmath>`` 自带的 ``pow`` 函数在计算整数的次幂方面更快。
 
-2. print(content)
+print(content)
 ~~~~~~~~~~~~~~~~
 
 用于提示文字类的消息，会在游戏界面出现一个弹窗。
 
-3. ynPrint(content)
+ynPrint(content)
 ~~~~~~~~~~~~~~~~~~
 
 会在游戏界面出现一个确认弹窗，选择 **是/否** 会分别返回 **1/0** 。
 
-4. str2wstr(str)
+str2wstr(str)
 ~~~~~~~~~~~~~~~~
 
 会将传统的 ``string`` 字符串转换成 ``wstring`` 宽字符串。
 
-5. vectorFind(source, target)
+vectorFind(source, target)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 判断一个 ``vector`` 是否包含某个对象，如果是非常规的自定义数据类型，需要重载 ``=`` 符号。
 
-6. strInclude(source, target)
+strInclude(source, target)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 判断字符串中是否含有某个子串，并返回结果。
 
-7. replaceAll(source, target, replacement)
+replaceAll(source, target, replacement)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 将字符串 ``source`` 中所有的 ``target`` 都替换为 ``replacement`` 。
 
-8. allToInt(strArray)
+allToInt(strArray)
 ~~~~~~~~~~~~~~~~~~~~~
 
 可以将 ``strArray`` 的所有元素转换成 ``int`` 类型并返回。
 
-9. insertNewLines(string, lineMax)
+insertNewLines(string, lineMax)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 在 ``string`` 中插入换行符，每隔 ``lineMax`` 个全角字符后会进行一次换行，如果遇到换行符会清空计数。
 
-10. existFile(filepath)
+existFile(filepath)
 ~~~~~~~~~~~~~~~~~~~~~~
 
 判断是否存在某个文件。
 
-11. split(s, seperator)
+split(s, seperator)
 ~~~~~~~~~~~~~~~~~~~~~~
 
 将一个字符串根据分割符分割成若干个子串，返回的是一个 ``vector<string>`` 类型的值。
 
-12. readFile(file)
+readFile(file)
 ~~~~~~~~~~~~~~~~~~~
 
 读取文件并按行分离成 ``vector<string>`` 。
 
-13. readData(file, splt)
+readData(file, splt)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 根据本框架数据存储格式来读取数据信息，第二个参数默认为 ``":""`` ，也是一个分割符，用来分割数据名称和数据值。 假设一个数据文件的存储格式如下：
@@ -89,17 +89,17 @@
 
 可以看出，冒号换成了等于号，所以在读取ini文件时，第二个参数设置成 ``"="`` 即可。
 
-14. playSE(file)
+playSE(file)
 ~~~~~~~~~~~~~~~~~~
 
 用来播放SE的函数。 ``file`` 部分直接写文件名即可，本函数会直接定向到 ``sound\`` 文件夹。
 
-15. drawText
+drawText
 ~~~~~~~~~~~~
 
 用于在屏幕上显示文字的函数，本函数有两个重载：
 
-15.1. drawText(dx, dy, content, size, bond, Colour)
+drawText(dx, dy, content, size, bond, Colour)
 -------------------------------------------------------
 
 .. csv-table:: 
@@ -111,7 +111,7 @@
     "bond", "为是否加粗，缺省值false"
     "colour", "为文字颜色，缺省值白色"
 
-15.2. drawText(rect, content, pos, size, bond, colour)
+drawText(rect, content, pos, size, bond, colour)
 ------------------------------------------------------
 
 .. csv-table:: 
@@ -124,12 +124,12 @@
     "bond", "为是否加粗，缺省值false"
     "colour", "为文字颜色，缺省值白色"
 
-16.  drawImage
+drawImage
 ~~~~~~~~~~~~~~
 
 用于在屏幕上临时绘图的函数，本函数也有两个重载：
 
-16.1. drawImage(file, x, y, opacity)
+drawImage(file, x, y, opacity)
 ------------------------------------
 
 ``file`` 为文件路径，需要注意，函数仅会定位至 ``graphics\`` 文件夹，后续文件夹需要标明。
@@ -140,7 +140,7 @@
 
 ``opacity`` 为显示的不透明度，缺省值255。
 
-16.2. drawImage(file, x, y, rect, opacity)
+drawImage(file, x, y, rect, opacity)
 -------------------------------------------
 
 此重载的 ``file`` , ``x`` , ``y`` , ``opacity`` 和上面一致。
