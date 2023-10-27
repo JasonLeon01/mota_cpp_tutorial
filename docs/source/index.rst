@@ -19,15 +19,35 @@ Mota_cpp
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
+   :caption: 🚀 写在最前
 
-   前置介绍
-   基础配置
-   工具说明
-   数据文件说明
-   工程说明
-   内部函数
-   内部类
-   内部数据结构
-   附录：C++入门
-   附录：SFML入门
+   /写在最前/前置介绍
+   /写在最前/基础配置
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: 💡 外部介绍
+
+   /外部介绍/工具说明
+   /外部介绍/数据文件说明
+   /外部介绍/工程说明
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: 🪄 内部介绍
+
+   /内部介绍/内部函数
+   /内部介绍/内部类
+   /内部介绍/内部数据结构
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: 📚 附录
+
+   /附录/C++入门
+   /附录/SFML入门
 
