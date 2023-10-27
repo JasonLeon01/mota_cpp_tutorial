@@ -6,7 +6,7 @@
 
 如果您使用的是JetBrains CLion，您可以打开软件并定位至目标项目，找到 ``include\Game\`` 下的所有文件并双击加入顶部栏中，然后将  ``src\`` 下的所有 ``.cpp`` 文件和 ``CMakeLists.txt`` 文件加入顶部栏。
 
-在左侧栏右键点击 ``CmakeLists.txt`` ，选择 ``Reload Cmake Project`` ，即可加载CMake，右上角点击锤子样式的 ``Build`` 图标即可。点击绿色右箭头样式的 ``Run`` 图标可以运行，点击虫子样式的 ``Debug`` 图标可以调试断点等。
+在左侧栏右键点击 ``CmakeLists.txt`` ，选择 :guilabel:`Reload Cmake Project` ，即可加载CMake，右上角点击锤子样式的 :guilabel:`Build` 图标即可。点击绿色右箭头样式的 :guilabel:`Run` 图标可以运行，点击虫子样式的 :guilabel:`Debug` 图标可以调试断点等。
 
 发布可运行项目时，需要保留哪些文件
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,7 +16,7 @@
 怎样修改生成exe的图标
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-您需要首先创建一个自己的 ``Icon.ico`` 文件，放入 ``ico\`` 路径下，在该文件夹下点击鼠标右键，选择 **在终端中打开** ，输入 ``windres Icon.rc -o Icon.o`` 命令生成对应的 ``Icon.o`` 文件，然后在Clion中 ``Reload Cmake Project`` 加载CMake，点击 ``Build`` 构建exe即可。
+您需要首先创建一个自己的 ``Icon.ico`` 文件，放入 ``ico\`` 路径下，在该文件夹下点击 :guilabel:`鼠标右键` ，选择 :guilabel:`在终端中打开` ，输入 ``windres Icon.rc -o Icon.o`` 命令生成对应的 ``Icon.o`` 文件，然后在Clion中 :guilabel:`Reload Cmake Project` 加载CMake，点击 :guilabel:`Build` 构建exe即可。
 
 ShortcutKey.txt是什么，有什么作用？
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
