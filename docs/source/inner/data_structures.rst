@@ -5,40 +5,6 @@
 
 所有数据的存储是在 :ref:`label_gamedata` 处，可以直接点击跳转。
 
-GameTemp -> motaTemp
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-用来存储临时变量的类，后续自行DIY也可以在此处修改，当前已有的临时变量会在 ``order`` 函数处对其赋值。
-
-.. csv-table:: 当前已有临时变量含义
-    :widths: 50, 100
-
-    "battleEnemyID", "当前与之战斗的敌人ID"
-    "shopType", "当前触发的商店类型"
-    "shopID", "当前商店编号"
-    "functionEventID", "正在交互的事件编号"
-    "closeMS", "关闭状态栏，也可以使用7号变量控制关闭"
-    "transEventName", "事件结束后，更改成的名字，可不填写"
-    "directlyFunction", "事件更改名字后，是否直接触发"
-    "toDisposeEvent", "是否结束事件"
-    "gameOver", "游戏结束的标志"
-    "messageInfo", "对话信息"
-    "floorEnemies", "记录当前楼层怪物信息"
-
-GameVariables -> motaVariables
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-游戏变量相关的集合。
-
-.. csv-table::
-    :widths: 50, 100
-
-    "variables", "游戏内部变量，可参考RMXP的开关和变量，具体代表含义在variables.txt处标注"
-    "itemRecord", "记录获得过的物品"
-    "floorRecord", "记录去过的楼层"
-    "eventRecord", "记录消失过的事件"
-    "transRecord", "记录变更过名字的事件"
-
 GameEvent
 ~~~~~~~~~~~~~
 
@@ -313,6 +279,40 @@ searchMap(mapnane)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 按照地图名搜索地图的函数，返回相应地图编号，同名地图返回序号靠前的。
+
+GameTemp -> motaTemp
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+用来存储临时变量的类，后续自行DIY也可以在此处修改，当前已有的临时变量会在 ``order`` 函数处对其赋值。
+
+.. csv-table:: 当前已有临时变量含义
+    :widths: 50, 100
+
+    "battleEnemyID", "当前与之战斗的敌人ID"
+    "shopType", "当前触发的商店类型"
+    "shopID", "当前商店编号"
+    "functionEventID", "正在交互的事件编号"
+    "closeMS", "关闭状态栏，也可以使用7号变量控制关闭"
+    "transEventName", "事件结束后，更改成的名字，可不填写"
+    "directlyFunction", "事件更改名字后，是否直接触发"
+    "toDisposeEvent", "是否结束事件"
+    "gameOver", "游戏结束的标志"
+    "messageInfo", "对话信息"
+    "floorEnemies", "记录当前楼层怪物信息"
+
+GameVariables -> motaVariables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+游戏变量相关的集合。
+
+.. csv-table::
+    :widths: 50, 100
+
+    "variables", "游戏内部变量，可参考RMXP的开关和变量，具体代表含义在variables.txt处标注"
+    "itemRecord", "记录获得过的物品"
+    "floorRecord", "记录去过的楼层"
+    "eventRecord", "记录消失过的事件"
+    "transRecord", "记录变更过名字的事件"
 
 ScreenData -> screenData ★★★★★
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
