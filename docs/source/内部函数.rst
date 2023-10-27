@@ -42,22 +42,27 @@
 
 可以将 ``strArray`` 的所有元素转换成 ``int`` 类型并返回。
 
-9.  existFile(filepath)
+9. insertNewLines(string, lineMax)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+在 ``string`` 中插入换行符，每隔 ``lineMax`` 个全角字符后会进行一次换行，如果遇到换行符会清空计数。
+
+10. existFile(filepath)
 ~~~~~~~~~~~~~~~~~~~~~~
 
 判断是否存在某个文件。
 
-10. split(s, seperator)
+11. split(s, seperator)
 ~~~~~~~~~~~~~~~~~~~~~~
 
 将一个字符串根据分割符分割成若干个子串，返回的是一个 ``vector<string>`` 类型的值。
 
-11. readFile(file)
+12. readFile(file)
 ~~~~~~~~~~~~~~~~~~~
 
 读取文件并按行分离成 ``vector<string>`` 。
 
-12. readData(file, splt)
+13. readData(file, splt)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 根据本框架数据存储格式来读取数据信息，第二个参数默认为 ``":""`` ，也是一个分割符，用来分割数据名称和数据值。 假设一个数据文件的存储格式如下：
@@ -84,17 +89,17 @@
 
 可以看出，冒号换成了等于号，所以在读取ini文件时，第二个参数设置成 ``"="`` 即可。
 
-13. playSE(file)
+14. playSE(file)
 ~~~~~~~~~~~~~~~~~~
 
 用来播放SE的函数。 ``file`` 部分直接写文件名即可，本函数会直接定向到 ``sound\`` 文件夹。
 
-14. drawText
+15. drawText
 ~~~~~~~~~~~~
 
 用于在屏幕上显示文字的函数，本函数有两个重载：
 
-14.1. drawText(dx, dy, content, size, bond, Colour)
+15.1. drawText(dx, dy, content, size, bond, Colour)
 -------------------------------------------------------
 
 .. csv-table:: 
@@ -106,7 +111,7 @@
     "bond", "为是否加粗，缺省值false"
     "colour", "为文字颜色，缺省值白色"
 
-14.2. drawText(rect, content, pos, size, bond, colour)
+15.2. drawText(rect, content, pos, size, bond, colour)
 ------------------------------------------------------
 
 .. csv-table:: 
@@ -119,12 +124,12 @@
     "bond", "为是否加粗，缺省值false"
     "colour", "为文字颜色，缺省值白色"
 
-15.  drawImage
+16.  drawImage
 ~~~~~~~~~~~~~~
 
 用于在屏幕上临时绘图的函数，本函数也有两个重载：
 
-15.1. drawImage(file, x, y, opacity)
+16.1. drawImage(file, x, y, opacity)
 ------------------------------------
 
 ``file`` 为文件路径，需要注意，函数仅会定位至 ``graphics\`` 文件夹，后续文件夹需要标明。
@@ -135,7 +140,7 @@
 
 ``opacity`` 为显示的不透明度，缺省值255。
 
-15.2. drawImage(file, x, y, rect, opacity)
+16.2. drawImage(file, x, y, rect, opacity)
 -------------------------------------------
 
 此重载的 ``file`` , ``x`` , ``y`` , ``opacity`` 和上面一致。
