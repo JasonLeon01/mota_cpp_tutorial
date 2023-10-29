@@ -89,20 +89,39 @@ GameKeyBoard -> motaKeyBoard
 
 关于全键盘的类，和魔塔样板的全键盘脚本相似，对应跨文件全局变量为 ``motaKeyBoard`` 。
 
-press(key),repeat(key),trigger(key)
---------------------------------------
+press(key)
+----------
 
-这些和魔塔样板全键盘脚本的设置完全相同。
+原理是 ``GetAsyncKeyState(key)&0x8000`` ，返回值看是否非零，这样可以无缓存的判定键盘的按下，只要你的手指还按在键盘上，就会不断地响应。
 
-pressConfirm(),repeatConfirm(),triggerConfirm(),pressCancel(),repeatCancel(),triggerCancel()
----------------------------------------------------------------------------------------------
+repeat(key)
+------------
 
-使用上述三种按法按下确认（空格和回车）和取消（Esc和X）键的判定。
+原理是用计数器统计 ``GetAsyncKeyState(key) & 0x8000`` 相应的次数，若干次内将不再返回 ``true`` 。
+
+trigger(key)
+------------
+
+原理是在按下时记录一次，松开时取消记录，而有记录时将不再相应，按一次键盘无论按多久都只响应一次。
+
+pressConfirm(),repeatConfirm(),triggerConfirm()
+-----------------------------------------------
+
+使用上述三种按法按下确认键，将会返回 ``true`` 。
+
+确认键指的是 ``Enter`` 和 ``Space`` 。
+
+pressCancel(),repeatCancel(),triggerCancel()
+---------------------------------------------
+
+使用上述三种按法按下取消键，将会返回 ``true`` 。
+
+取消键指的是 ``X`` 和 ``Esc`` 。
 
 doubleClick(key)
 ----------------
 
-判定是否双击的函数。
+判定是否双击的函数，原理是判定两次连续的敲击键盘，如果时间间隔不超过若干毫秒，则判定为双击。
 
 dir4()
 ------
