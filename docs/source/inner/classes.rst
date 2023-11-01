@@ -141,7 +141,7 @@ x,y,z,width,height,opacity,visible
 
 窗口的x,y,z坐标、宽高和不透明度以及是否可见。
 
-hasFunction
+haveFunction
 ^^^^^^^^^^^^
 
 判断是否有执行函数的变量，如果为 ``true`` ，则在显示的时候会执行里面的 ``refresh()`` 函数。

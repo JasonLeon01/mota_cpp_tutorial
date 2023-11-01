@@ -32,6 +32,11 @@ strInclude(source,target)
 
 判断字符串中是否含有某个子串，并返回结果。
 
+strIncludeNum(source,target)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+判断字符串中包含某子串的数量有 **多少个** ，并返回结果。
+
 replaceAll(source,target,replacement)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -51,6 +56,16 @@ split(s,seperator)
 ~~~~~~~~~~~~~~~~~~~~
 
 将一个字符串根据分割符分割成若干个子串，返回的是一个 ``vector<string>`` 类型的值。
+
+arrayToString(arr, len)
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+将一个字符串转换成以 ``,`` 分隔的字符串，返回的是一个 ``string`` 类型的值。
+
+arrayToString(arr)
+~~~~~~~~~~~~~~~~~~~
+
+重载，将一个字符串转换成以 ``,`` 分隔的字符串，返回的是一个 ``string`` 类型的值，其中 ``arr`` 是 ``vector<int>`` 类型。
 
 readFile(file)
 ~~~~~~~~~~~~~~
@@ -145,7 +160,7 @@ drawImage(file,x,y,rect,opacity)
 
 此重载的 ``file`` ,``x`` ,``y`` ,``opacity`` 和上面一致。
 
-.. image:: sample_25.png
+.. image:: sample_26.png
    :align: center
    :alt: 矩形演示
 
