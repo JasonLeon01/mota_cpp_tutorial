@@ -42,3 +42,8 @@ main.ini
     "stairSE", "上下楼SE", ""
     "getSE", "获取物品SE", ""
     "windowOpacity", "窗口不透明度", "从0~255"
+
+motaName.ini
+~~~~~~~~~~~~
+
+魔塔名称的存储， ``a:b`` 对应魔塔编号和魔塔名称。
