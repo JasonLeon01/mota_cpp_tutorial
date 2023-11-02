@@ -8,21 +8,16 @@
 可视化地图编辑器MapDesigner.exe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: sample_3.png
+.. image:: sample_1.png
    :align: center
    :alt: 可视化地图编辑器MapDesigner.exe
 
 这里可以对游戏地图进行绘制。
 
-如何创建新地图
--------------
-
-在 ``data\map\`` 处可以看到一个叫做 ``blankmap.dat`` 的文件，这就是空白地图，复制粘贴之后将文件名改为 ``map_x.dat`` 即可，需要注意所有的 ``map_x.dat`` 的 ``x`` 必须连贯且从0开始，否则地图编辑器将无法识别中断处之后的地图。
-
 事件名称介绍
 -----------
 
-.. image:: sample_4.png
+.. image:: sample_2.png
    :align: center
    :alt: 事件名称介绍
 
@@ -107,20 +102,20 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 行走图
 ------
 
-.. image:: sample_5.png
+.. image:: sample_3.png
    :align: center
    :alt: 行走图
 
 这里决定了事件的行走图以及在行走图上对应的位置，行走图素材严格按照128*128的标准，在区域内按下鼠标右键可以选择图片，按下鼠标左键可以选择位置。
 
-.. image:: sample_6.png
+.. image:: sample_4.png
    :align: center
    :alt: 选择图片
 
 出现触发判定
 -----------
 
-.. image:: sample_7.png
+.. image:: sample_5.png
    :align: center
    :alt: 出现触发判定
 
@@ -146,7 +141,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 地图名
 ^^^^^^
 
-.. image:: sample_8.png
+.. image:: sample_6.png
    :align: center
    :alt: 地图名
 
@@ -157,7 +152,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 地图BGM
 ^^^^^^^
 
-.. image:: sample_9.png
+.. image:: sample_7.png
    :align: center
    :alt: 地图BGM
 
@@ -166,7 +161,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 动效
 ^^^^
 
-.. image:: sample_10.gif
+.. image:: sample_8.gif
    :align: center
    :alt: 动效
 
@@ -175,7 +170,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 穿透
 ^^^^
 
-.. image:: sample_11.png
+.. image:: sample_9.png
    :align: center
    :alt: 穿透
 
@@ -184,7 +179,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 隐藏信息
 ^^^^^^^^
 
-.. image:: sample_12.gif
+.. image:: sample_10.gif
    :align: center
    :alt: 隐藏信息
 
@@ -193,7 +188,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 匹配图像
 ^^^^^^^
 
-.. image:: sample_13.gif
+.. image:: sample_11.gif
    :align: center
    :alt: 匹配图像
 
@@ -205,7 +200,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 添加
 ^^^^
 
-.. image:: sample_14.gif
+.. image:: sample_12.gif
    :align: center
    :alt: 添加
 
@@ -214,7 +209,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 复制
 ^^^^
 
-.. image:: sample_15.gif
+.. image:: sample_13.gif
    :align: center
    :alt: 复制
 
@@ -223,7 +218,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 删除
 ^^^^
 
-.. image:: sample_16.gif
+.. image:: sample_14.gif
    :align: center
    :alt: 删除
 
@@ -232,7 +227,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 移动
 ^^^^
 
-.. image:: sample_17.gif
+.. image:: sample_15.gif
    :align: center
    :alt: 移动
 
@@ -241,7 +236,7 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 覆盖
 ^^^^
 
-.. image:: sample_18.gif
+.. image:: sample_16.gif
    :align: center
    :alt: 覆盖
 
@@ -250,18 +245,37 @@ NPC的命名方式为 ``npc/x`` ，会自动寻找数据库里的npc数据完成
 保存
 ^^^^
 
-.. image:: sample_19.png
+.. image:: sample_17.png
    :align: center
    :alt: 保存
 
 会保存当前页面的地图，保存成功后会弹出一个窗口，是本地图所有信息的一个列表。
+
+新增地图 & 设为空白地图
+^^^^^^^^^^^^^^^^^^^^^^
+
+最新一期新增内容
+
+.. image:: sample_18.png
+   :align: center
+   :alt: 新增地图&设为空白地图
+
+新增地图
+""""""""
+
+会在列表中新增一个地图，默认按照当前的空白地图模板 ``blankmap.dat`` 进行初始化。
+
+设为空白地图
+"""""""""""""
+
+会将当前地图的信息整合起来存入 ``blankmap.dat`` 。
 
 动画编辑器AnimationDesigner.exe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 这里可以对游戏动画进行绘制，支持的动画 **单个图片** 规格的动画素材（需要是透明底图）。
 
-.. image:: sample_20.png
+.. image:: sample_19.png
    :align: center
    :alt: 保存
 
@@ -272,7 +286,7 @@ RMXP动画素材分离器AnimationSeparator.exe
 
 这里可以对RMXP规格的动画素材分离成若干192 * 192的素材，并保存在原路径中。
 
-.. image:: sample_21.png
+.. image:: sample_20.png
    :align: center
    :alt: 保存
 
@@ -285,7 +299,7 @@ NPC对话编辑器NPCDesigner.exe
 
 这里可以对游戏内NPC的对话内容进行设置。
 
-.. image:: sample_22.png
+.. image:: sample_21.png
    :align: center
    :alt: 保存
 
@@ -298,6 +312,10 @@ NPC对话编辑器NPCDesigner.exe
 ^^^^^^^^^^^^^^^
 
 选择项单起一行，在最前面加上 ``[s]`` ，代码就会识别出来这是选择项了，并且会出现光标矩形。
+
+.. image:: sample_22.png
+   :align: center
+   :alt: 添加选择项
 
 例如：
 
@@ -313,6 +331,10 @@ NPC对话编辑器NPCDesigner.exe
 
 本框架所有事件指令均依托于事件名，在选择项内容描述完之后加上 ``=>`` ，然后写上需要执行的事件名，之后就会创建一个“临时事件”并执行相关指令。
 
+.. image:: sample_23.png
+   :align: center
+   :alt: 选择项指令
+
 例如：
 
 .. code-block:: cpp
@@ -321,6 +343,13 @@ NPC对话编辑器NPCDesigner.exe
     你好，你要选择什么？
     [s]1攻击=>bonus/1/2
     [s]1防御=>bonus/2/2
+
+
+演示效果如下：
+
+.. image:: sample_24.png
+   :align: center
+   :alt: 演示
 
 何谓全角字符和半角字符？
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -347,13 +376,13 @@ NPC对话编辑器NPCDesigner.exe
 
 在对话中插入 ``x`` 号变量的方法为写成 ``[x]`` ，代码会自动识别半角方括号里的内容，并读取当前变量的值进行替换。
 
-.. image:: sample_23.png
+.. image:: sample_24.png
    :align: center
    :alt: 插入变量
 
 效果演示如下：
 
-.. image:: sample_24.png
+.. image:: sample_25.png
    :align: center
    :alt: 插入变量演示
 
@@ -362,7 +391,7 @@ NPC对话编辑器NPCDesigner.exe
 
 这里可以对游戏内怪物的能力以及属性进行设置。
 
-.. image:: sample_25.png
+.. image:: sample_26.png
    :align: center
    :alt: 怪物编辑器
 

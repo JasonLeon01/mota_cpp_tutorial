@@ -160,7 +160,7 @@ drawImage(file,x,y,rect,opacity)
 
 此重载的 ``file`` ,``x`` ,``y`` ,``opacity`` 和上面一致。
 
-.. image:: sample_26.png
+.. image:: sample_1.png
    :align: center
    :alt: 矩形演示
 

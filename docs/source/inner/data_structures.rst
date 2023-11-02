@@ -32,12 +32,14 @@ GameEvent
 构造函数
 ^^^^^^^
 
-GameEvent(ex,ey)，可以初始化对象的初始xy坐标。
+GameEvent(name,x=0,y=0)，可以初始化对象的事件名和初始xy坐标。
 
-order()
-^^^^^^^
+order(tempEV=false)
+^^^^^^^^^^^^^^^^^^^
 
-一切事件指令的存储。
+一切事件指令的存储， ``tempEV`` 用来判断是否是临时事件，决定是否将事件ID传入 ``motaTemp.functionEventID`` 。
+
+如果要执行一个临时事件指令，可以用 ``GameEvent(evname).order(true)`` 来执行。
 
 endEvent()
 ^^^^^^^^^^^
@@ -347,22 +349,26 @@ init()
 
 初始化函数，会将角色数据从 ``motaData.actors`` 中读取。
 
-loadMap(mapID)
+loadMap(mapID,*gmap)
 ^^^^^^^^^^^^^^^
 
-读取地图的函数，会从 ``motaData.maps`` 中读取地图文件数据并根据当前的 ``motaVariables`` 更改地图样式。
+读取地图的函数， ``gmap`` 一般来说是 ``screenData.visualMap`` ，不过你也可以从 ``motaData.maps`` 中读取其他地图文件数据并用这个函数读取。
 
 mapStatus()
 ^^^^^^^^^^^
 
 显示游戏状态栏的函数，状态栏的DIY在此处修改。
 
-showMap(gmap,x,y)
+showMap(gmap,x,y,rate=1.f,visible=true,clear_device=true)
 ^^^^^^^^^^^^^^^^^^^
 
 在画面的(x,y)处显示地图 ``gmap`` 的函数，作用和 ``motaGraphics.update()`` 相当，游戏中的动画也在此处显示，在遍历事件处有地图显示伤害的配置，可在此处自行修改。
 
-此外，还可以在最后插一个 ``float`` 类型的变量 ``rate`` ，代表地图的放缩率，缺省值为1。
+``rate`` 代表地图的放缩率。
+
+``visible`` 代表在地图上主角的行走图是否可见。
+
+``clear_device`` 代表是否清空画面，如果是新开一个窗口预览地图，需要设置为 ``false`` 。
 
 waitCount(times)
 ^^^^^^^^^^^^^^^^
