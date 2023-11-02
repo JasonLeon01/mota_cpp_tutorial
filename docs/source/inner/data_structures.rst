@@ -271,6 +271,7 @@ GameData -> motaData ★★★
     "items", "物品道具数据存放"
     "maps", "地图数据存放"
     "npc", "NPC数据存放"
+    "motaName", "用于储存魔塔编号对应的名字"
 
 .. hint:: 其中 ``actors`` 和 ``maps`` 仅仅存放初始数据， **请勿修改** ，关于游戏中相关的在后面。
 
