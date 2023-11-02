@@ -315,6 +315,9 @@ GameVariables -> motaVariables
 
 游戏变量相关的集合。
 
+成员
+----
+
 .. csv-table::
     :widths: 50, 100
 
@@ -323,6 +326,14 @@ GameVariables -> motaVariables
     "floorRecord", "记录去过的楼层"
     "eventRecord", "记录消失过的事件"
     "transRecord", "记录变更过名字的事件"
+
+函数
+----
+
+replaceToVar(source)
+^^^^^^^^^^^^^^^^^^^^
+
+可以将形如 ``[x]`` 的字符串替换为对应序号变量的值。
 
 ScreenData -> screenData ★★★★★
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
