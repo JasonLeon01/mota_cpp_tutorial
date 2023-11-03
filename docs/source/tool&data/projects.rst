@@ -8,6 +8,8 @@
 
 在左侧栏右键点击 ``CmakeLists.txt`` ，选择 :guilabel:`Reload Cmake Project` ，即可加载CMake，右上角点击锤子样式的 :guilabel:`Build` 图标即可。点击绿色右箭头样式的 :guilabel:`Run` 图标可以运行，点击虫子样式的 :guilabel:`Debug` 图标可以调试断点等。
 
+.. hint:: 注意，发布的时候一定要选择Release模式，否则exe会变得特别大！。
+
 发布可运行项目时，需要保留哪些文件
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
