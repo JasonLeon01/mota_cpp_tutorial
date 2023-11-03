@@ -18,6 +18,11 @@ IDE
 建议为JetBrains CLion，当然，您也可以使用Microsoft Visual Studio等，不过需要一些变更，保证头文件、源文件、lib、dll以及各种数据文件都在即可。
 在CLion中，务必记住编码为UTF-8。
 
+建议
+~~~~
+
+在打开CLion后，点击俄罗斯方块式样的 :guilabel:`Structure` 打开结构树，可以帮助你更快地定位到你想要的类或者函数。
+
 系统设置
 ~~~~~~~
 
