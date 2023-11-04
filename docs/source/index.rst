@@ -1,7 +1,7 @@
-Mota_cpp
-=========
+mota_cpp_framework
+==================
 
-**Mota_cpp** 是一个基于C++语言和SFML图形库的魔塔类游戏框架。
+**mota_cpp_framework** 是一个基于C++语言和SFML图形库的魔塔类游戏框架。
 
 主要特点
 --------
