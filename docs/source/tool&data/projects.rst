@@ -15,17 +15,17 @@
 
 您需要首先创建一个自己的 ``Icon.ico`` 文件，放入 ``ico\`` 路径下，在该文件夹下点击 :guilabel:`鼠标右键` ，选择 :guilabel:`在终端中打开` ，输入 ``windres Icon.rc -o Icon.o`` 命令生成对应的 ``Icon.o`` 文件，然后在Clion中 :guilabel:`Reload Cmake Project` 加载CMake，点击 :guilabel:`Build` 构建exe即可。
 
-ref\ShortcutKey.txt是什么，有什么作用？
+ref \ ShortcutKey.txt是什么，有什么作用？
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 这是用来介绍快捷键的文本，您的工程以后需要用到的快捷键介绍可以写在这里，当状态栏检测到 ``ref\ShortcutKey.txt`` 存在时，会在地图右下角显示一个 ``～Press L～`` ，提示玩家按L键获取快捷键信息。
 
-ref\begin.txt是什么，有什么作用？
+ref \ begin.txt是什么，有什么作用？
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 这个是设置开头字幕的，如果删除该文件，将不会显示开头字幕而是直接进游戏。
 
-ref\end.txt是什么，有什么作用？
+ref \ end.txt是什么，有什么作用？
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 这个是设置结局字幕的，如果删除该文件，将不会显示结局字幕而是直接回到标题画面。
