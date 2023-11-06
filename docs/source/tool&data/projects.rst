@@ -19,6 +19,11 @@
 
 您需要首先创建一个自己的 ``Icon.ico`` 文件，放入 ``ico\`` 路径下，在该文件夹下点击 :guilabel:`鼠标右键` ，选择 :guilabel:`在终端中打开` ，输入 ``windres Icon.rc -o Icon.o`` 命令生成对应的 ``Icon.o`` 文件，然后在Clion中 :guilabel:`Reload Cmake Project` 加载CMake，点击 :guilabel:`Build` 构建exe即可。
 
+ref\\Variables.txt是什么，有什么作用？
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+这个是用来记录变量作用的文本文档，格式是 ``变量id:变量描述:初始值`` ，不设定初始值的话默认为0。
+
 ref\\ShortcutKey.txt是什么，有什么作用？
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

@@ -305,13 +305,15 @@ GameTemp -> motaTemp
 
     "battleEnemyID", "当前与之战斗的敌人ID"
     "shopType", "当前触发的商店类型"
-    "shopID", "当前商店编号"
     "functionEventID", "正在交互的事件编号"
     "closeMS", "关闭状态栏，也可以使用7号变量控制关闭"
     "transEventName", "事件结束后，更改成的名字，可不填写"
     "directlyFunction", "事件更改名字后，是否直接触发"
     "toDisposeEvent", "是否结束事件"
     "gameOver", "游戏结束的标志"
+    "ending", "结局的标志"
+    "addPower", "记录商店增加能力的数值"
+    "initPrice", "记录商店价格"
     "messageInfo", "对话信息"
     "floorEnemies", "记录当前楼层怪物信息"
 
