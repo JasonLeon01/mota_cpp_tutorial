@@ -23,6 +23,11 @@ str2wstr(str)
 
 会将传统的 ``string`` 字符串转换成 ``wstring`` 宽字符串。
 
+wstr2str(wstr)
+~~~~~~~~~~~~~~
+
+会将 ``wstring`` 宽字符串转换成传统的 ``string`` 字符串。
+
 vectorFind(source,target)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 判断一个 ``vector`` 是否包含某个对象，如果是非常规的自定义数据类型，需要重载 ``=`` 符号。
