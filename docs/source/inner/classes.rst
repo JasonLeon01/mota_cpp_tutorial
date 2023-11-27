@@ -1,7 +1,7 @@
 内部类
 =======
 
-这一部分可以参考 ``include\Game\GameSystem.h`` 和 ``src\GameSystem.cpp`` 文件内容。
+这一部分可以参考 ``include\Game\System\`` 和 ``src\System\`` 文件夹内容。
 
 SceneBase
 ~~~~~~~~~
@@ -44,10 +44,10 @@ setSprite(file,x=0,y=0,width=0,height=0,sx=0,sy=0)
 
 对 ``Image`` 的 ``Sprite`` 进行设置（更新），除了 ``file`` 以外，其余参数缺省值为0。
 
-dispose()
-^^^^^^^^^
+show()
+^^^^^^
 
-将该对象从 ``motaGraphics`` 的队列中删除，更新画面时将不再显示。
+展示 ``Image`` 到屏幕上，一般用于 ``GameGraphics`` 中。
 
 GameText
 ~~~~~~~~~
@@ -67,17 +67,22 @@ Text的xy坐标，z是优先级，z越高在屏幕上的优先级越大，显示
 构造函数
 ^^^^^^^^^
 
-GameText(txt,x=0,y=0)
+GameText(\*font,txt,x=0,y=0)
 
-setText(txt,x=0,y=0)
+setText(\*font,txt,x=0,y=0)
 ^^^^^^^^^^^^^^^^^^^^^
 
-设置 ``Text`` 的属性。
+设置 ``Text`` 的属性， ``font`` 需要引用，因为这个结构非常大，不引用会导致次次复制，传递非常慢。
 
 getSize()
 ^^^^^^^^^
 
 获取 ``Text`` 的宽高。
+
+show()
+^^^^^^
+
+展示 ``Text`` 到屏幕上，一般用于 ``GameGraphics`` 中。
 
 System -> motaSystem
 ~~~~~~~~~~~~~~~~~~~~~
@@ -95,9 +100,9 @@ System -> motaSystem
     "bgm", "为游戏BGM，Music类型变量"
     "scene", "为设置场景的变量，motaSystem.scene可以类比为RMXP里的$scene"
     "gameTime", "用以计算游戏时间，每刷新一次将会+1，一般是用来设置行走动画相关的内容"
+    "resolutionRatio", "是当前的分辨率（放大率），最低是1（即默认的640x480），最大是2（变成1280x960）"
     "frameRate", "是刷新频率，每隔若干时间会刷新一次"
     "windowOpacity", "是默认的窗口不透明度"
-    "resolutionRatio", "是当前的分辨率（放大率），最低是1（即默认的640x480），最大是2（变成1280x960）"
     "BGMVolume,SEVolume", 为BGM和SE的音量。
     "xxSE", "为各种SE的文件名，具体参考main.ini"
     "textureCache", "为纹理的缓存，这些都会在开始游戏时缓存完成。"
@@ -243,11 +248,6 @@ drawArrow(rect,now,page,pagestr="")
 ``now`` 为现在的页数， ``page`` 为最大页数。
 
 ``pagestr`` 为两箭头中间的文字，如果是纵向箭头，在窗口靠左则文字头朝左，在窗口靠右则文字头朝右。
-
-dispose()
-^^^^^^^^^
-
-释放窗口的函数，将会把 ``this`` 从 ``motaGraphics`` 的队列中删除。
 
 GameSelectWindow
 ~~~~~~~~~~~~~~~~

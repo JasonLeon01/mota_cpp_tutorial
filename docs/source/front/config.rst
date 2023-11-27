@@ -29,6 +29,7 @@ main.ini
     :header: "参数", "含义", "备注"
     :widths: 20, 50, 50
 
+    "title", "游戏窗口名称", ""
     "windowskinName", "窗口素材文件名", "存储于graphics\\system\\"
     "titleName", "标题背景文件名", "存储于graphics\\system\\"
     "fontName", "字体文件名", "存储于font\\"
@@ -48,4 +49,4 @@ main.ini
 motaName.ini
 ~~~~~~~~~~~~
 
-魔塔名称的存储， ``a:b`` 对应魔塔编号和魔塔名称。
+魔塔名称的存储， ``a=b`` 对应魔塔编号和魔塔名称。

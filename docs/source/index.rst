@@ -3,6 +3,8 @@ mota_cpp_framework
 
 **mota_cpp_framework** 是一个基于C++语言和SFML图形库的魔塔类游戏框架。
 
+.. hint:: 本框架内容随时可能更新，如果遇到不熟悉的内容，请先在Github上看看是不是使用的最新的版本。
+
 主要特点
 --------
 
@@ -56,4 +58,5 @@ mota_cpp_framework
 
    /appendix/C++
    /appendix/SFML
+   /appendix/nlohmann-json
 

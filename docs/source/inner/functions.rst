@@ -3,6 +3,60 @@
 
 这一部分可以参考 ``include\Game\stdafx.h`` 和 ``src\stdafx.cpp`` 文件内容。
 
+playSE(file,volume)
+~~~~~~~~~~~~~~~~~~~
+
+用来播放SE的函数。 ``file`` 部分直接写文件名即可，本函数会直接定向到 ``sound\`` 文件夹， ``volume`` 为0~100的浮点数。
+
+drawText
+~~~~~~~~~
+
+用于在屏幕上显示文字的函数：
+
+drawText(\*window,\*font,rect, content, pos, size, bond, colour)
+-------------------------------------------------
+
+.. csv-table:: 
+    :widths: 20, 50
+    
+    "\*window", "为窗口对象，需引用"
+    "\*font", "为字体对象，需引用"
+    "rect", "为坐标限制矩形，文字会根据pos确定自身的位置"
+    "content", "为显示的文本"
+    "pos", "为位置，0、1、2对应为左对齐、完全居中、右对齐，缺省值0"
+    "size", "为字号，缺省值20"
+    "bond", "为是否加粗，缺省值false"
+    "colour", "为文字颜色，缺省值白色"
+
+drawImage
+~~~~~~~~~~
+
+用于在屏幕上临时绘图的函数，本函数有两个重载：
+
+drawImage(\*window,\*texture,x,y,opacity)
+------------------------------
+
+``\*window`` 为窗口对象，需引用；
+
+``\*texture`` 为纹理对象，需引用；
+
+若需要显示 ``system`` 文件夹里的 ``mting.png`` ， ``file`` 参数应写为 ``system\\mting.png`` ；
+
+``x`` 和 ``y`` 为显示在的xy坐标；
+
+``opacity`` 为显示的不透明度，缺省值255。
+
+drawImage(\*window,\*texture,x,y,rect,opacity)
+------------------------------------
+
+此重载的 ``\*window`` , ``\*texture`` , ``x`` , ``y`` , ``opacity`` 和上面一致。
+
+.. image:: sample_1.png
+   :align: center
+   :alt: 矩形演示
+
+``rect`` 为显示时的裁剪矩形，想象图片本身是一个大矩形，现在要用一个小矩形去框选其中的一部分， ``rect`` 的四个参数分别是 ``sx``, ``sy`` , ``width``, ``height`` ，用于截选图片中的一部分。
+
 quickPow(num,n)
 ~~~~~~~~~~~~~~~~~
 
@@ -108,65 +162,3 @@ saveFile(file,content)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 存储单行文件，当然，你可以在 ``content`` 里面加上 ``\n`` 。
-
-playSE(file)
-~~~~~~~~~~~~
-
-用来播放SE的函数。 ``file`` 部分直接写文件名即可，本函数会直接定向到 ``sound\`` 文件夹。
-
-drawText
-~~~~~~~~~
-
-用于在屏幕上显示文字的函数，本函数有两个重载：
-
-drawText(dx,dy,content,size,bond,Colour)
-----------------------------------------------
-
-.. csv-table:: 
-    :widths: 20, 50
-
-    "dx和dy", "xy坐标"
-    "content", "为显示的文本"
-    "size", "为字号，缺省值20"
-    "bond", "为是否加粗，缺省值false"
-    "colour", "为文字颜色，缺省值白色"
-
-drawText(rect, content, pos, size, bond, colour)
--------------------------------------------------
-
-.. csv-table:: 
-    :widths: 20, 50
-    
-    "rect", "为坐标限制矩形，文字会根据pos确定自身的位置"
-    "content", "为显示的文本"
-    "pos", "为位置，0、1、2对应为左对齐、完全居中、右对齐，缺省值0"
-    "size", "为字号，缺省值20"
-    "bond", "为是否加粗，缺省值false"
-    "colour", "为文字颜色，缺省值白色"
-
-drawImage
-~~~~~~~~~~
-
-用于在屏幕上临时绘图的函数，本函数也有两个重载：
-
-drawImage(file,x,y,opacity)
-------------------------------
-
-``file`` 为文件路径，需要注意，函数仅会定位至 ``graphics\`` 文件夹，后续文件夹需要标明。
-
-若需要显示 ``system`` 文件夹里的 ``mting.png`` ， ``file`` 参数应写为 ``system\\mting.png`` ；
-
-``x`` 和 ``y`` 为显示在的xy坐标；
-
-``opacity`` 为显示的不透明度，缺省值255。
-
-drawImage(file,x,y,rect,opacity)
-------------------------------------
-
-此重载的 ``file`` ,``x`` ,``y`` ,``opacity`` 和上面一致。
-
-.. image:: sample_1.png
-   :align: center
-   :alt: 矩形演示
-
-``rect`` 为显示时的裁剪矩形，想象图片本身是一个大矩形，现在要用一个小矩形去框选其中的一部分， ``rect`` 的四个参数分别是 ``sx``, ``sy`` , ``width``, ``height`` ，用于截选图片中的一部分。
