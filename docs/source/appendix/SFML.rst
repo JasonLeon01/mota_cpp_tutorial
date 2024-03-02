@@ -15,7 +15,7 @@ sf::Color
 sf::Font
 ~~~~~~~~~
 
-为SFML的字体类，字体会在 ``main.ini`` 中进行设置，读取的是 ``font\`` 文件夹下的字体文件，无需用户安装字体。
+为SFML的字体类，字体会在 ``main.ini`` 中进行设置，读取的是 ``assets\font\`` 文件夹下的字体文件，无需用户安装字体。
 
 sf::Music & sf::Sound
 ~~~~~~~~~~~~~~~~~~~~~
@@ -102,7 +102,8 @@ setOutlineColor(color)
 sf::Texture
 ~~~~~~~~~~~~
 
-Texture的中文为 **纹理** ，也就是贴在对象/模型上的图片，需要从文件中加载，本框架会将 ``graphics\`` 默认的三个文件夹的所有内容都预先加载到 ``motaSystem.textureCache`` 中，直接调用即可，如果想要了解原理可以参考如下内容。
+Texture的中文为 **纹理** ，也就是贴在对象/模型上的图片，需要从文件中加载，
+本框架会将 ``assets\`` 默认的文件夹的所有图片类型内容都预先加载到 ``motaSystem.textureCache`` 中，直接调用即可，如果想要了解原理可以参考如下内容。
 
 loadFromFile(string, IntRect)
 -----------------------------

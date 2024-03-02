@@ -290,7 +290,8 @@ GameGraphics -> motaGraphics
 update(clear_device)
 ---------------------
 
-用于更新画面的类， ``clear_device`` 用于判断是否在函数开头清空画面，缺省值为 ``true`` ，因为还有 ``ScreenData`` 类会将地图画面显示在屏幕上，那里会清空一次屏幕，所以在 ``MotaMap`` 类中， ``motaGraphics`` 的 ``update`` 是不用清屏的。
+用于更新画面的类， ``clear_device`` 用于判断是否在函数开头清空画面，缺省值为 ``true`` ，因为还有 ``ScreenData`` 类会将地图画面显示在屏幕上，
+那里会清空一次屏幕，所以在 ``MotaMap`` 类中， ``motaGraphics`` 的 ``update`` 是不用清屏的。
 
 dispose()
 ---------

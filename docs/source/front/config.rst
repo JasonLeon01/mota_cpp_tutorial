@@ -30,9 +30,9 @@ main.ini
     :widths: 20, 50, 50
 
     "title", "游戏窗口名称", ""
-    "windowskinName", "窗口素材文件名", "存储于graphics\\system\\"
-    "titleName", "标题背景文件名", "存储于graphics\\system\\"
-    "fontName", "字体文件名", "存储于font\\"
+    "windowskinName", "窗口素材文件名", "存储于assets\\system\\"
+    "titleName", "标题背景文件名", "存储于assets\\system\\"
+    "fontName", "字体文件名", "存储于assets\\font\\"
     "titleBGM", "标题bgm", ""
     "cursorSE", "选择SE", ""
     "decisionSE", "确认SE", ""
