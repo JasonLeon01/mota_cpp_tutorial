@@ -262,7 +262,7 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 动效
 ^^^^
 
-.. image:: sample_8.gif
+.. image:: sample_8.png
    :align: center
    :alt: 动效
 
@@ -280,7 +280,7 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 隐藏信息
 ^^^^^^^^
 
-.. image:: sample_10.gif
+.. image:: sample_10.png
    :align: center
    :alt: 隐藏信息
 
@@ -289,7 +289,7 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 匹配图像
 ^^^^^^^
 
-.. image:: sample_11.gif
+.. image:: sample_11.png
    :align: center
    :alt: 匹配图像
 
@@ -301,7 +301,7 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 添加
 ^^^^
 
-.. image:: sample_12.gif
+.. image:: sample_12.png
    :align: center
    :alt: 添加
 
@@ -310,7 +310,7 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 复制
 ^^^^
 
-.. image:: sample_13.gif
+.. image:: sample_13.png
    :align: center
    :alt: 复制
 
@@ -319,7 +319,7 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 删除
 ^^^^
 
-.. image:: sample_14.gif
+.. image:: sample_14.png
    :align: center
    :alt: 删除
 
@@ -328,7 +328,7 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 移动
 ^^^^
 
-.. image:: sample_15.gif
+.. image:: sample_15.png
    :align: center
    :alt: 移动
 
@@ -337,7 +337,7 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 覆盖
 ^^^^
 
-.. image:: sample_16.gif
+.. image:: sample_16.png
    :align: center
    :alt: 覆盖
 
@@ -354,8 +354,6 @@ NPC的命名方式为 ``npc(x)`` ，会自动寻找数据库里的npc数据完�
 
 新增地图 & 设为空白地图
 ^^^^^^^^^^^^^^^^^^^^^^
-
-最新一期新增内容
 
 .. image:: sample_18.png
    :align: center
@@ -481,9 +479,17 @@ NPC对话编辑器NPCDesigner.exe
 在对话中插入当前游戏某变量的值
 ---------------------------
 
-在对话中插入 ``x`` 号变量的方法为写成 ``[x]`` ，代码会自动识别半角方括号里的内容，并读取当前变量的值进行替换。
+在对话中插入 ``x`` 号变量的方法为写成 ``[vx]`` ，代码会自动识别半角方括号里的内容，并读取当前变量的值进行替换，例如12号变量就是 ``[v12]`` 。
 
-在对话中插入角色各项能力数值的方法写成 ``[能力名称]`` ，比如角色的攻击力写成 ``[atk]`` 。
+在对话中插入当前游戏某物品的数量的方法为写成 ``[ix]`` ，代码会自动识别半角方括号里的内容，并读取当前物品的数量进行替换，例如12号物品就是 ``[i12]`` 。
+
+在对话中插入角色各项能力数值的方法写成 ``[能力名称]`` ，列表如下所示：
+
+.. csv-table:: 能力名称对应参考
+    :header: "能力名称", "生命值", "攻击力", "防御力", "魔防", "经验", "金币", "等级"
+    :widths: 20, 30, 30, 30, 30, 30, 30, 30
+
+    "代表", "[hp]", "[atk]", "[def]", "[mdef]", "[exp]", "[gold]", "[lv]"
 
 .. image:: sample_24.png
    :align: center

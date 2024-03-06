@@ -120,10 +120,10 @@ bgmSwitch(file)
 
 切换BGM使用的函数。
 
-GameKeyBoard -> motaKeyBoard
+GameInput -> motaInput
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-关于全键盘的类，和魔塔样板的全键盘脚本相似，对应跨文件全局变量为 ``motaKeyBoard`` 。
+关于全键盘的类，和魔塔样板的全键盘脚本相似，对应跨文件全局变量为 ``motaInput`` 。
 
 press(key)
 ----------
