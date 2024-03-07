@@ -34,7 +34,7 @@
 
 您也可以点击事件名称右侧的 :guilabel:`...` 按钮，会弹出一个编辑框，可以直接编辑事件名称，编辑完之后点击 :guilabel:`完成` 即可，想具体了解DSL格式的可以参考以下介绍。
 
-.. image:: sample_29.png
+.. image:: sample_28.png
    :align: center
    :alt: 事件名称编辑
 
@@ -396,7 +396,7 @@ RMXP动画素材分离器AnimationSeparator.exe
 物品辑器ItemDesigner.exe
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: sample_28.png
+.. image:: sample_27.png
    :align: center
    :alt: 物品编辑器
 
@@ -445,8 +445,8 @@ NPC对话编辑器NPCDesigner.exe
     :linenos:
 
     你好，你要选择什么？
-    [s]1攻击=>bonus/1/2
-    [s]1防御=>bonus/2/2
+    [s]1攻击=>bonus(1,2)
+    [s]1防御=>bonus(2,2)
 
 
 演示效果如下：
