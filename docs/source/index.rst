@@ -40,7 +40,6 @@ mota_cpp_framework
    :caption: 💡 外部介绍
 
    /tool&data/tools
-   /tool&data/dsl
    /tool&data/datas
    /tool&data/projects
 

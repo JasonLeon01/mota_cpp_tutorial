@@ -1,30 +1,31 @@
-# nlohmann/json入门
+nlohmann/json入门
+==================
 
-*nlohmann/json* 是一个开源的C++库，用于处理JSON数据。它提供了简单、直观的API，使得在C++中解析、创建和操作JSON数据变得非常方便。
+nlohmann/json是一个开源的C++库，用于处理JSON数据。它提供了简单、直观的API，使得在C++中解析、创建和操作JSON数据变得非常方便。
 
-本部分将会介绍 *nlohmann/json* 的基本用法，包括如下内容：
-- 如何解析JSON数据
-- 如何创建JSON数据
-- 如何访问JSON数据
-- 如何修改JSON数据
-- 如何序列化JSON数据
+这部分将会介绍nlohmann/json的基本用法，包括如何解析JSON数据、如何创建JSON数据、如何访问JSON数据、如何修改JSON数据、如何序列化JSON数据等。
 
-## 如何从文件中读取json数据
+如何从文件中读取json数据
+~~~~~~~~~~~~~~~~~~~~~~~
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+
     ifstream f("example.json");
-    nlohmann::json data =nlohmann::json::parse(f);
+    nlohmann::json data = nlohmann::json::parse(f);
     /* nlohmann::json data;
     data >> f;*/
-```
 
-## json作为第一类数据类型
+json作为第一类数据类型
+~~~~~~~~~~~~~~~~~~~~~
 
 以下是一些示例，可帮助您了解如何使用该类。
 
 假设您要创建 JSON 对象:
 
-```cpp
+.. code-block:: json
+    :linenos:
+
     nlohmann::json data = {
         {"pi", 3.141},
         {"happy", true},
@@ -39,11 +40,12 @@
             {"value", 42.99}
         }}
     };
-```
 
 有了这个库，你可以写：
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+
     // create an empty structure (null)
     json j;
     // add a number that is stored as double (note the implicit conversion of j to an object)
@@ -75,12 +77,13 @@
             {"value", 42.99}
         }}
     };
-```
 
 请注意，在所有这些情况下，您永远不需要“告诉”编译器您要使用哪种 JSON 值类型。
-如果您想明确或表达一些边缘情况，函数 `json::array()` 和 `json::object()` 将有所帮助：
+如果您想明确或表达一些边缘情况，函数 ``json::array()`` 和 ``json::object()`` 将有所帮助：
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+
     // a way to express the empty array []
     json empty_array_explicit = json::array();
     // ways to express the empty object {}
@@ -88,13 +91,15 @@
     json empty_object_explicit = json::object();
     // a way to express an _array_ of key/value pairs [["currency", "USD"], ["value", 42.99]]
     json array_not_object = json::array({ {"currency", "USD"}, {"value", 42.99} });
-```
 
-## 序列化json对象
+序列化json对象
+~~~~~~~~~~~~~
 
 您可以将json对象序列化为字符串，一般的常见std类型均可直接使用括号赋值，例如：
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+
     std::vector<int> c_vector {1, 2, 3, 4};
     json j_vec(c_vector);
     // [1, 2, 3, 4]
@@ -122,21 +127,23 @@
     std::unordered_multiset<std::string> c_umset {"one", "two", "one", "four"};
     json j_umset(c_umset); // both entries for "one" are used
     // maybe ["one", "two", "one", "four"]
-```
 
 但是显然，我们还会需要自定义一些类型，比如：
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+
     struct MyStruct {
         int i;
         std::string str;
         bool b;
     };
-```
 
 这时候，你觉得应该怎么做？如果你觉得要这样：
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+
     json j;
     MyStruct my_struct;
     j["i"] = my_struct.i;
@@ -145,13 +152,15 @@
     ofstream outputFile("data.json");
     outputFile << j.dump(4);
     outputFile.close();
-```
 
 那就有点脱裤子放屁了，失去了“序列化”的最重要意义——简洁表述。
 
-官方给我们定义了一个宏 `NLOHMANN_DEFINE_TYPE_INTRUSIVE(name, member1, member2, ...)` ，用于自定义类型的序列化，我们可以这样使用：
+官方给我们定义了一个宏 ``NLOHMANN_DEFINE_TYPE_INTRUSIVE(name, member1, member2, ...)`` ，用于自定义类型的序列化，我们可以这样使用：
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+    :emphasize-lines: 5,9
+
     struct MyStruct {
         int i;
         std::string str;
@@ -164,15 +173,17 @@
     ofstream outputFile("data.json");
     outputFile << j.dump(4);
     outputFile.close();
-```
 
 这样就可以自动序列化了，是不是很简洁？
 
-## 反序列化json对象
+反序列化json对象
+~~~~~~~~~~~~~~~
 
 反序列化也是一样的，我们可以这样使用：
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+
     json j = R"(
     {
         "happy": true,
@@ -181,11 +192,12 @@
     )"_json;
     bool b = j.at("happy");
     double pi = j.at("pi");
-```
 
 对于自定义的类型，我们可以这样使用：
 
-```cpp
+.. code-block:: cpp
+    :linenos:
+
     struct MyStruct {
         int i;
         std::string str;
@@ -200,4 +212,4 @@
     }
     )"_json;
     MyStruct my_struct = j;
-```
+
