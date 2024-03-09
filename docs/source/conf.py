@@ -2,6 +2,10 @@
 
 # -- Project information
 
+import os
+import sys
+import lumache
+
 project = 'mota_cpp_framework'
 copyright = '2024-2040, Metempsychosis Game Studio'
 author = 'Metempsychosis Game Studio'
