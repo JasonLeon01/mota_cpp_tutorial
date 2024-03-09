@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'mota_cpp_framework'
+copyright = '2024-2040, Metempsychosis Game Studio'
+author = 'Metempsychosis Game Studio'
 
 release = '0.1'
 version = '0.1.0'
